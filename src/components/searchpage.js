@@ -17,22 +17,13 @@ class SearchPage extends React.Component {
     this.setState({ searchtext: e.target.value }, async () => {
       try {
         const res = await axios.get(
-          `https://api.github.com/search/users?q=${this.state.searchtext}`,
-          {
-            headers: {
-              Authorization: `token ${AT}`,
-            },
-          }
+          `https://api.github.com/search/users?q=${this.state.searchtext}`
         );
         let arr = [];
         const { items } = res.data;
         items.forEach((e) => {
           axios
-            .get(`${e.url}`, {
-              headers: {
-                Authorization: `token ${AT}`,
-              },
-            })
+            .get(`${e.url}`)
             .then((resp) => arr.push(resp.data))
             .catch((err) => console.log(err));
         });

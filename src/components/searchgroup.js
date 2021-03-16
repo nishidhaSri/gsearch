@@ -45,6 +45,7 @@ class SearchGroup extends React.Component {
               result.map((val, i) => {
                 return (
                   <Badge
+                    key={i}
                     count={
                       <HeartOutlined
                         onClick={() => this.handleFaveClick(val)}
@@ -68,7 +69,12 @@ class SearchGroup extends React.Component {
                       />
                     }
                   >
-                    <a href={val.html_url} target="_blank" rel="noreferrer">
+                    <a
+                      key={i}
+                      href={val.html_url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <Card
                         key={i}
                         hoverable

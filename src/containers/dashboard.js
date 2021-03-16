@@ -13,11 +13,7 @@ class Dashboard extends React.Component {
     let arr = [];
     fav.forEach((e) => {
       axios
-        .get(`${e}`, {
-          headers: {
-            Authorization: `token ${AT}`,
-          },
-        })
+        .get(`${e}`)
         .then((resp) => {
           arr.push(resp.data);
           this.setState((prev) => ({
@@ -25,7 +21,7 @@ class Dashboard extends React.Component {
           }));
           // console.log(arr);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err.message));
     });
   }
   render() {
