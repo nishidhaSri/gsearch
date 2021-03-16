@@ -10,18 +10,20 @@ class Dashboard extends React.Component {
   componentDidMount() {
     const fav = JSON.parse(localStorage.getItem("fav"));
     let arr = [];
-    fav.forEach((e) => {
-      axios
-        .get(`${e}`)
-        .then((resp) => {
-          arr.push(resp.data);
-          this.setState((prev) => ({
-            result: [...prev.result, resp.data],
-          }));
-          // console.log(arr);
-        })
-        .catch((err) => console.log(err.message));
-    });
+    if (fav) {
+      fav.forEach((e) => {
+        axios
+          .get(`${e}`)
+          .then((resp) => {
+            arr.push(resp.data);
+            this.setState((prev) => ({
+              result: [...prev.result, resp.data],
+            }));
+            // console.log(arr);
+          })
+          .catch((err) => console.log(err.message));
+      });
+    }
   }
   render() {
     return (
