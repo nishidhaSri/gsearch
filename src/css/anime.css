@@ -1,0 +1,48 @@
+.anime-block {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: #97cdff;
+}
+
+.rocket {
+  height: fit-content;
+  offset-path: path(
+    "M140.3,149.7-29.5,149.7c-91,0-125.2-66.1-120-108.9c7.3-60,38.2-104,124.4-142.1C311.1,112.2,699.2,6.3,699.2,6.3"
+  );
+  -webkit-animation: move 3000ms forwards ease-in-out;
+  animation: move 3000ms forwards ease-in-out;
+  border-radius: 0%;
+  offset-distance: 100%;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+@-webkit-keyframes move {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    /* offset-distance: 100%; */
+    transform: rotate(30deg);
+  }
+}
+@keyframes move {
+  0% {
+    offset-distance: 0;
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    offset-distance: 100%;
+    transform: rotate(30deg);
+  }
+}

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+
+.searchpage {
+  background: #000;
+  min-height: 100vh;
+}
+
+.title {
+  position: relative;
+  color: #000;
+  font: 900 60px Montserrat;
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.concept {
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+  height: 235px;
+  flex-direction: column;
+}
+.concept:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+.concept-six {
+  display: flex;
+  align-items: center;
+  background: #dcedc8;
+}
+.title {
+  width: 550px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+.title:hover .char:nth-child(1) {
+  margin-top: -30px;
+  transform: rotate(-20deg);
+}
+.title:hover .char:nth-child(2) {
+  margin: -40px 0px 0 10px;
+  transform: rotate(5deg);
+}
+.title:hover .char:nth-child(3) {
+  margin: 15px 0 0 10px;
+  transform: rotate(12deg);
+}
+.title:hover .char:nth-child(4) {
+  margin: -25px 0 0;
+  transform: rotate(5deg);
+}
+.title:hover .char:nth-child(5) {
+  margin: -40px 5px 0;
+  transform: rotate(-10deg);
+}
+
+.title:hover .char:nth-child(6) {
+  margin-top: -20px;
+  transform: rotate(-5deg);
+}
+.title:hover .char:nth-child(7) {
+  margin: 10px 0px 0 10px;
+  transform: rotate(7deg);
+}
+
+.char {
+  flex: 1;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.searchbar {
+  position: relative;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar input {
+  width: 70%;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid;
+  font-size: 20px;
+  padding: 0 20px 0 20px;
+}
+
+.searchresults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background: #000; */
+  margin-top: 20px;
+}
+
+.searchresults .ant-card-body {
+  text-align: center;
+}
+
+.searchresults .ant-result-subtitle,
+.searchresults .ant-result-title {
+  color: #fff;
+}
+
+.searchresults .ant-badge {
+  margin: 20px;
+}
+
+.dashboard-link,
+.dashboard-link:hover {
+  width: 100%;
+  z-index: 5;
+  color: #000;
+}
+
+.dash-link {
+  margin: 20px 20px 0 20px;
+  width: 90%;
+  text-align: right;
+  font-weight: 700;
+  font-family: "Ranchers", cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 425px) {
+  .title {
+    width: 100%;
+    font-size: 40px;
+  }
+}
