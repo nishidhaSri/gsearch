@@ -2,7 +2,6 @@ import React from "react";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import axios from "axios";
 import SearchGroup from "../components/searchgroup";
-import { AT } from "../config";
 
 class Dashboard extends React.Component {
   state = {

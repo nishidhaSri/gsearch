@@ -3,7 +3,6 @@ import React from "react";
 import "../css/searchpage.css";
 import SearchGroup from "./searchgroup";
 import { ArrowRightOutlined } from "@ant-design/icons";
-import { AT } from "../config";
 
 class SearchPage extends React.Component {
   state = {
