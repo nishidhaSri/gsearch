@@ -4,6 +4,8 @@ A space to search among various github profiles. You can save favorite profiles 
 
 To view the functioning of the website, view https://youtu.be/5aq5Q5D9cEQ
 
+To contribute, checkout the guidelines [here](https://github.com/nishidhaSri/gsearch/blob/master/CONTRIBUTING.md).
+
 ## Get Started
 
 1. Fork the repository and clone it.
