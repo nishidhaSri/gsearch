@@ -2,8 +2,7 @@
 
 A space to search among various github profiles. You can save favorite profiles and visit them anytime.
 
-<!-- To view the functioning of the website, view https://youtu.be/5aq5Q5D9cEQ -->
-<iframe width="944" height="549" src="https://www.youtube.com/embed/5aq5Q5D9cEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+To view the functioning of the website, view https://youtu.be/5aq5Q5D9cEQ
 
 ## Get Started
 
