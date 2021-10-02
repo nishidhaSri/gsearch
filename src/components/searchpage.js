@@ -3,6 +3,7 @@ import React from "react";
 import "../css/searchpage.css";
 import SearchGroup from "./searchgroup";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import Loader from '../img/Loader.svg'
 
 class SearchPage extends React.Component {
   state = {
@@ -63,11 +64,13 @@ class SearchPage extends React.Component {
           />
         </div>
         <div className="searchresults">
+          {!this.state.loading?
           <SearchGroup
             result={this.state.result}
             hit={this.state.hit}
             loading={this.state.loading}
           />
+          : <img src={Loader} alt="Loading..."/> }
         </div>
       </div>
     );
